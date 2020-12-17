@@ -33,6 +33,15 @@ function experienceyear(){
     });
 }
 
+function subofname(){
+    console.log(window.innerWidth);
+    if(window.innerWidth<=767.98){
+        $('.namesub').html(`<br>MS, PCP, CPA`);
+    }else{
+        $('.namesub').html(`, MS, PCP, CPA`);
+    }
+}
+
 function eduyear(){
     // $('.edulist > .item').each(function(){
     //     if($(this).children('.university').position().top == $(this).children('.university').children('.year').position().top){
@@ -48,7 +57,8 @@ var forexperienceyear;
 var foreduyear;
 
 $(window).resize(function() {
-    setbasicinfoforscreenresize();
+
+    subofname();
 
     clearTimeout(forprojecttool);
     forprojecttool = setTimeout(Projecttool, 500);    
@@ -81,32 +91,9 @@ function setskillicons(){
     $(".level-title:contains('MS Project')").prepend('<img class="langlogo" src="assets/images/languages/msproject.png"/>');       
 }
 
-function setbasicinfo(){
-
-    var info = $(".info");
-    
-    if ($(".secondary").position().top>500){
-        $(".info").detach();
-        $(".secondary").append(info);
-    }
-}
-
-function setbasicinfoforscreenresize(){
-
-    var info = $(".info");
-    
-    if ($(".secondary").position().top>500){
-        $(".info").detach();
-        $(".secondary").append(info);
-    }else{
-        $(".info").detach();
-        $(".secondary").prepend(info);
-    }
-}
-
 jQuery(document).ready(function($) {
 
-    setbasicinfo();
+    subofname();
     Projecttool();
     experienceyear();
     eduyear();

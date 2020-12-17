@@ -499,6 +499,9 @@ a.dotted-link:hover {
   .elementor:not(.elementor-edit-area-active) .elementor-hidden-phone {
     display: block !important;
   }
+  .about ul {
+    padding: 0px 5px;
+  }
 }
 
 @media (min-width: 1400px) {
