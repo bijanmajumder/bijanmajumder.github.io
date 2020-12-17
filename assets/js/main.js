@@ -34,7 +34,6 @@ function experienceyear(){
 }
 
 function subofname(){
-    console.log(window.innerWidth);
     if(window.innerWidth<=767.98){
         $('.namesub').html(`<br>MS, PCP, CPA`);
     }else{
